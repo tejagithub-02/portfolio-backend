@@ -1,6 +1,7 @@
 services:
   - type: web
     name: portfolio-backend
-    runtime: java
-    buildCommand: mvn clean install
-    startCommand: java -jar target/*.jar
+    env: java
+    plan: free
+    buildCommand: mvn clean package
+    startCommand: java -jar target/*.jar 
